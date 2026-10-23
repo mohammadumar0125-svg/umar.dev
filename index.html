@@ -540,7 +540,7 @@
         /* Keep the photo in the top hero; use one dark monochrome canvas below it. */
         #home{background:#08090b;color:#f5f5f5;background-image:none}
         #home .space-hero{min-height:min(850px,calc(100svh - 64px));background:#05070a;isolation:isolate}
-        #home .space-backdrop{position:absolute;z-index:0;inset:-2%;background:url('/earth-night-glow.png') center 61%/cover no-repeat;filter:blur(1.4px) brightness(.9) saturate(.95);animation:spaceImageDrift 24s ease-in-out infinite alternate;will-change:transform}
+        #home .space-backdrop{position:absolute;z-index:0;inset:-2%;background:url('earth-night-glow.png') center 61%/cover no-repeat;filter:blur(1.4px) brightness(.9) saturate(.95);animation:spaceImageDrift 24s ease-in-out infinite alternate;will-change:transform}
         @keyframes spaceImageDrift{to{transform:scale(1.07) translate3d(-.5%,.4%,0)}}
         #home .space-hero:before{z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.69),rgba(0,0,0,.22) 72%),linear-gradient(0deg,rgba(0,0,0,.62),transparent 45%)}
         #home .space-hero:after{z-index:1;background:radial-gradient(ellipse at 25% 36%,rgba(255,255,255,.08),transparent 40%);animation:spaceGlow 8s ease-in-out infinite alternate}
