@@ -874,6 +874,99 @@
     }
 }
 
+        /* Full-width, centered navigation with the language selector beside Contact. */
+        @media (min-width: 761px) {
+            .bar {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                max-width: none;
+                padding: 16px clamp(22px, 4vw, 64px);
+                gap: clamp(14px, 2vw, 28px);
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            .brand-lockup, .brand-mark { flex: 0 0 auto; }
+            .brand-mark { width: 40px; height: 40px; }
+            nav {
+                display: flex;
+                flex: 0 1 auto;
+                align-items: center;
+                justify-content: center;
+                gap: clamp(16px, 2.5vw, 36px);
+                margin: 0 auto;
+                font-size: 16px;
+                font-weight: 700;
+                white-space: nowrap;
+            }
+            nav a { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+            nav a.on { font-weight: 800; }
+            .mobile-menu-toggle { display: none; }
+            .language-control { position: relative; top: auto; right: auto; flex: 0 0 auto; margin: 0; transform: none; }
+            .language-trigger {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                width: auto;
+                min-height: 46px;
+                padding: 10px 14px;
+                border: 1px solid #d8d8d8;
+                border-radius: 999px;
+                background: #fff;
+                color: #111;
+                box-shadow: 0 5px 18px rgba(0,0,0,.07);
+                font: 600 14px 'DM Sans',sans-serif;
+                white-space: nowrap;
+            }
+            .language-icon { width: 18px; height: 18px; }
+            .language-chevron { display: inline; font-size: 1rem; }
+            .language-menu { top: calc(100% + 10px); right: 0; transform: none; }
+            .header-cta { flex: 0 0 auto; margin: 0; }
+        }
+        @media (min-width: 761px) and (max-width: 1040px) {
+            .bar { padding-left: 20px; padding-right: 20px; gap: 12px; }
+            .brand-mark { width: 34px; height: 34px; }
+            .logo { font-size: 20px; }
+            nav { gap: 12px; font-size: 14px; }
+            .language-trigger { min-height: 42px; padding: 8px 10px; font-size: 13px; }
+            .language-icon { width: 16px; height: 16px; }
+            .header-cta { padding: 10px 14px; font-size: 13px; }
+        }
+        @media (max-width: 760px) {
+            .bar { display: flex; }
+            .language-control { position: relative; top: auto; right: auto; margin: 0; transform: none; }
+            .language-trigger { flex-direction: row; gap: 8px; width: auto; min-height: 42px; padding: 8px 11px; border: 1px solid #d8d8d8; border-radius: 999px; box-shadow: none; font-size: 13px; }
+            .language-icon { width: 16px; height: 16px; }
+            .language-chevron { display: inline; }
+            .language-menu { top: calc(100% + 10px); right: 0; transform: none; }
+        }
+
+        /* Services page: clear hierarchy and a responsive six-card grid. */
+        #services .services-wrap { max-width: 1360px; }
+        #services .services-intro { max-width: 850px; margin-bottom: 42px; }
+        #services .services-intro h1 { max-width: 18ch; margin: 8px 0 18px; color: #111; font-size: clamp(2.6rem, 5.5vw, 4.6rem); font-weight: 800; line-height: 1.02; letter-spacing: -.06em; }
+        #services .services-lead { max-width: 72ch; margin: 0; color: #555; font-size: 1.1rem; line-height: 1.75; }
+        #services .services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+        #services .service-card { min-height: 330px; display: flex; flex-direction: column; align-items: flex-start; padding: 28px; border: 1px solid #272727; border-radius: 20px; background: #151515; color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,.08); }
+        #services .service-number { display: grid; place-items: center; width: 46px; height: 46px; margin-bottom: 22px; border: 1px solid #555; border-radius: 14px; color: #fff; font-size: .82rem; font-weight: 800; letter-spacing: .08em; }
+        #services .service-card h2 { margin: 0 0 10px; color: #fff; font-family: 'DM Sans',sans-serif; font-size: 1.35rem; font-weight: 800; line-height: 1.2; letter-spacing: -.035em; }
+        #services .service-card h3 { margin: 0 0 12px; color: #eee; font-size: 1rem; font-weight: 700; line-height: 1.45; }
+        #services .service-card p { margin: 0; color: #c9c9c9; font-size: .92rem; font-weight: 400; line-height: 1.7; }
+        #services .service-card:hover { transform: translateY(-4px); border-color: #777; background: #1b1b1b; box-shadow: 0 18px 38px rgba(0,0,0,.14); }
+        #services .services-outro { max-width: 800px; margin: 38px auto 0; color: #444; font-size: 1.08rem; line-height: 1.75; text-align: center; }
+        #services .services-cta { margin-top: 22px; text-align: center; }
+        @media (max-width: 980px) { #services .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 650px) {
+            #services .services-intro { margin-bottom: 28px; }
+            #services .services-lead { font-size: 1rem; }
+            #services .services-grid { grid-template-columns: 1fr; gap: 14px; }
+            #services .service-card { min-height: 0; padding: 23px; }
+            #services .service-number { margin-bottom: 17px; }
+            #services .services-outro { margin-top: 28px; text-align: left; }
+        }
+
     </style>
 </head>
 
@@ -972,15 +1065,52 @@
 
         <!-- SERVICES -->
         <section id="services" class="page">
-            <div class="wrap">
-                <span class="badge">Services</span>
-                <h1 style="font-size:clamp(2.2rem,5vw,3.6rem);max-width:20ch">Websites built with purpose.</h1>
-                <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
-                    <div class="card"><div class="icon">01</div><h3>Business websites</h3><p>Fast, mobile-friendly sites for your business.</p></div>
-                    <div class="card"><div class="icon">02</div><h3>Portfolio websites</h3><p>A clean portfolio to show your work.</p></div>
-                    <div class="card"><div class="icon">03</div><h3>Website fixes and updates</h3><p>Quick fixes and updates for any screen.</p></div>
+            <div class="wrap services-wrap">
+                <div class="services-intro">
+                    <span class="badge">Services</span>
+                    <h1>Websites built with purpose.</h1>
+                    <p class="services-lead">I create modern, responsive, and user-friendly websites that combine thoughtful design with practical functionality. Every project is built to communicate clearly, showcase your work, and help your business grow online.</p>
                 </div>
-                <div style="margin-top:28px"><a class="pill" href="#contact">Discuss a project &rarr;</a></div>
+                <div class="services-grid">
+                    <article class="card service-card">
+                        <span class="service-number">01</span>
+                        <h2>Business websites</h2>
+                        <h3>A professional online presence for your business.</h3>
+                        <p>Modern, mobile-friendly websites designed to introduce your business, showcase your products or services, build customer trust, and help potential customers connect with you.</p>
+                    </article>
+                    <article class="card service-card">
+                        <span class="service-number">02</span>
+                        <h2>Portfolio websites</h2>
+                        <h3>A clean and elegant space to showcase your work.</h3>
+                        <p>Personal portfolios that highlight your skills, projects, experience, and achievements through a well-organized layout. Perfect for developers, students, freelancers, and creative professionals who want to stand out.</p>
+                    </article>
+                    <article class="card service-card">
+                        <span class="service-number">03</span>
+                        <h2>Website fixes and updates</h2>
+                        <h3>Small improvements that make a big difference.</h3>
+                        <p>I help improve existing websites by fixing layout issues, refining designs, updating content, improving mobile responsiveness, and ensuring that pages look consistent across different screen sizes.</p>
+                    </article>
+                    <article class="card service-card">
+                        <span class="service-number">04</span>
+                        <h2>Landing pages</h2>
+                        <h3>Focused designs that turn visitors into customers.</h3>
+                        <p>Clean, engaging landing pages created to promote a product, service, event, or business idea. With clear messaging, intuitive layouts, and strategically placed call-to-action buttons, each page guides visitors toward the next step.</p>
+                    </article>
+                    <article class="card service-card">
+                        <span class="service-number">05</span>
+                        <h2>Website redesign</h2>
+                        <h3>Giving existing websites a fresh, modern look.</h3>
+                        <p>I refresh outdated websites with elegant layouts, improved typography, balanced spacing, and a consistent visual identity. The goal is to make your website easier to navigate, more visually appealing, and more enjoyable to use.</p>
+                    </article>
+                    <article class="card service-card">
+                        <span class="service-number">06</span>
+                        <h2>Personal branding and web presence</h2>
+                        <h3>Your identity, presented with clarity and confidence.</h3>
+                        <p>I create personalized digital experiences that reflect your professional identity, including personal websites, profile pages, and online portfolios that help you present your work and connect with new opportunities.</p>
+                    </article>
+                </div>
+                <p class="services-outro">Every website starts with an idea. My goal is to turn that idea into a clear, functional, and meaningful digital experience.</p>
+                <div class="services-cta"><a class="pill" href="#contact">Discuss a project &rarr;</a></div>
             </div>
         </section>
 
